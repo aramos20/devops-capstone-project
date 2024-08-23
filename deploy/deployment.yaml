@@ -21,8 +21,8 @@ spec:
       - image: IMAGE_NAME_HERE
         name: accounts
         resources: {}
-      
-      env:
+
+        env:
           - name: DATABASE_HOST
             value: postgresql
           - name: DATABASE_NAME
@@ -39,4 +39,6 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: postgresql
+                key: database-user
+
 status: {}
